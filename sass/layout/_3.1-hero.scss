@@ -1,0 +1,14 @@
+.hero {
+    height: 80vh;
+    position: relative;
+    color: $white;
+
+    @include media('tablet') {
+        height: 65vh;
+    }
+
+    @include media('pc') {
+        height: 100vh;
+    }
+    
+}

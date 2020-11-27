@@ -1,0 +1,398 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  src: url("../fonts/poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("../fonts/poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url("../fonts/poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url("../fonts/poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  src: url("../fonts/poppins/Poppins-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair";
+  font-weight: 700;
+  src: url("../fonts/playfair/PlayfairDisplay-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/playfair/PlayfairDisplay-ExtraBoldItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair";
+  font-weight: 900;
+  src: url("../fonts/playfair/PlayfairDisplay-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Playball";
+  font-weight: 400;
+  src: url("../fonts/playball/Playball-Regular.ttf") format("truetype");
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.text-center {
+  width: 90%;
+  max-width: 60rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 20;
+}
+
+.large {
+  font-size: 5rem;
+  font-family: "Playball", sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .large {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .large {
+    font-size: 9rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #121212;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: "Playfair", sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+img {
+  max-width: 100%;
+}
+
+.nav {
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: none;
+}
+
+.nav-sm {
+  display: none;
+}
+
+.logo img {
+  width: 12rem;
+}
+
+.logo-white {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.mobile-menu-toggler {
+  width: 4rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear 0;
+  -o-transition: background-color 250ms linear 0;
+  transition: background-color 250ms linear 0;
+}
+
+.mobile-menu-toggler .line {
+  width: 80%;
+  height: 0.2rem;
+  background: #fff;
+  position: relative;
+  -webkit-transition: height 250ms linear 250ms;
+  -o-transition: height 250ms linear 250ms;
+  transition: height 250ms linear 250ms;
+}
+
+.mobile-menu-toggler .line::before,
+.mobile-menu-toggler .line::after {
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background: inherit;
+  position: absolute;
+  -webkit-transition: top 250ms linear 250ms,
+    -webkit-transform 250ms ease-in-out;
+  transition: top 250ms linear 250ms, -webkit-transform 250ms ease-in-out;
+  -o-transition: transform 250ms ease-in-out, top 250ms linear 250ms;
+  transition: transform 250ms ease-in-out, top 250ms linear 250ms;
+  transition: transform 250ms ease-in-out, top 250ms linear 250ms,
+    -webkit-transform 250ms ease-in-out;
+}
+
+.mobile-menu-toggler .line::before {
+  top: -0.5rem;
+}
+
+.mobile-menu-toggler .line::after {
+  top: calc(100% + 0.3rem);
+}
+
+.mobile-menu-toggler.open {
+  background: #9061c2 !important;
+}
+
+.mobile-menu-toggler.open .line {
+  -webkit-transition: height 250ms ease 150ms;
+  -o-transition: height 250ms ease 150ms;
+  transition: height 250ms ease 150ms;
+  height: 0;
+}
+
+.mobile-menu-toggler.open .line::before,
+.mobile-menu-toggler.open .line::after {
+  -webkit-transition: top 250ms linear,
+    -webkit-transform 250ms ease-in-out 250ms;
+  transition: top 250ms linear, -webkit-transform 250ms ease-in-out 250ms;
+  -o-transition: transform 250ms ease-in-out 250ms, top 250ms linear;
+  transition: transform 250ms ease-in-out 250ms, top 250ms linear;
+  transition: transform 250ms ease-in-out 250ms, top 250ms linear,
+    -webkit-transform 250ms ease-in-out 250ms;
+  top: 0;
+}
+
+.mobile-menu-toggler.open .line::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mobile-menu-toggler.open .line::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background: #9061c2;
+  color: #fff;
+  -webkit-transition: background-color 250ms linear, color 250ms linear;
+  -o-transition: background-color 250ms linear, color 250ms linear;
+  transition: background-color 250ms linear, color 250ms linear;
+}
+
+.btn:hover {
+  background: #121212;
+  color: #fff;
+}
+
+.hero {
+  height: 80vh;
+  position: relative;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 65vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 100vh;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.swiper-slide-1 {
+  background-image: url("../img/hero/slide-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.swiper-slide-2 {
+  background-image: url("../img/hero/slide-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.swiper-slide-3 {
+  background-image: url("../img/hero/slide-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  outline: none;
+  border: none;
+  -webkit-transition: background-color 250ms linear 0;
+  -o-transition: background-color 250ms linear 0;
+  transition: background-color 250ms linear 0;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #9061c2;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #fff;
+  font-size: 4rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}

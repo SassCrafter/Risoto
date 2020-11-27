@@ -1,0 +1,53 @@
+.mobile-menu-toggler {
+    width: 4rem;
+    @include flex(4rem);
+    background: transparent;
+    cursor: pointer;
+    @include t(background-color, $t-time, linear);
+
+    .line {
+        width: 80%;
+        height: .2rem;
+        background: $white;
+        position: relative;
+        @include t(height, $t-time, linear, $t-time);
+
+        &::before,
+        &::after {
+            content: '';
+            width: 100%;
+            height: .2rem;
+            background: inherit;
+            position: absolute;
+            transition: transform $t-time $t-timing, top $t-time linear $t-time;
+        }
+
+        &::before {
+            top: -.5rem;
+        }
+        &::after {
+            top: calc(100% + .3rem);
+        }
+    }
+
+    &.open {
+        background: $main-color !important;
+
+        .line {
+            transition: height $t-time ease $t-time - 100ms;
+            height: 0;
+
+            &::before,
+            &::after {
+                transition: transform $t-time $t-timing $t-time, top $t-time linear;
+                top: 0;
+            }
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
