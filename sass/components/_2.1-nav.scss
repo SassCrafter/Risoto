@@ -1,34 +1,76 @@
 .nav {
+  width: 100%;
+  height: $nav-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  @include t(background-color, $t-time, linear, -150ms);
+
+  &-content {
     width: 100%;
-    height: $nav-height;
+    @include flex(100%, row, center, space-between);
+  }
+
+  &-list {
+    width: 100vw;
+    @include flex(0, column, flex-start, center);
+    padding: 0 2rem;
+    @include set-bg-color($white);
     position: fixed;
-    top: 0;
+    top: $nav-height;
     left: 0;
-    z-index: 1000;
-    //background: white;
+    z-index: 990;
+    //@include t(height, $t-time, linear);
+    //transition: height $t-time linear;
+    //@include t(height, $t-time, linear, 0);
+    @include t(height, $t-time, linear);
+    overflow: hidden;
 
-    &-content {
-        width: 100%;
-        @include flex(100%, row, center, space-between);
+    li:not(:last-child) {
+      margin-bottom: 1rem;
     }
 
-
-    &-list {
-        display: none;
+    a {
+      display: inline-block;
+      padding: 0.5rem;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      color: $gray;
     }
 
-
-    &-sm {
-        display: none;
+    &.open {
+      height: 23rem;
     }
+  }
+
+  &-sm {
+    display: none;
+  }
+
+  &.open,
+  &-scrolled {
+    background-color: $white;
+
+    .logo-white {
+      filter: brightness(1);
+    }
+  }
+
+  &-scrolled {
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.15);
+    .mobile-menu-toggler {
+      background-color: $main-color;
+    }
+  }
 }
 
 .logo {
-    img {
-        width: 12rem;
-    }
+  img {
+    width: 12rem;
+  }
 
-    &-white {
-        filter: brightness(0) invert(1);
-    }
+  &-white {
+    filter: brightness(0) invert(1);
+  }
 }

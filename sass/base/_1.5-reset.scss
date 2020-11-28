@@ -1,45 +1,58 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: $font-stack;   
-    line-height: 1.6;
-    @include set-bg-color($white);
+  font-size: 1.6rem;
+  font-family: $font-stack;
+  line-height: 1.6;
+  @include set-bg-color($white);
 }
 
+section:not(.hero) {
+  padding: 3rem 0;
+}
 
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: $font-stack;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-stack;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
 p {
-    font-size: 1.5rem;
-    font-family: $playfair;
-    margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-family: $playfair;
+  margin-bottom: 1.5rem;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: $black;
+  text-decoration: none;
+  color: $black;
+  @include t(color, $t-time, linear);
+
+  &:hover {
+    color: $main-color !important;
+  }
 }
 
 img {
-    max-width: 100%;
+  width: 100%;
+  max-width: 100%;
 }
