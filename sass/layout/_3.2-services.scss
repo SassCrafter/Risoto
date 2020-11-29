@@ -1,0 +1,54 @@
+.services-section {
+  &-content {
+    @include flex(auto, row, flex-start, center);
+    flex-wrap: wrap;
+
+    div {
+      width: 100%;
+      height: 60rem;
+    }
+  }
+
+  .img-wrapper {
+    &-1 {
+      @include set-bg-img("../img/services/s-1.jpg");
+    }
+    &-2 {
+      @include set-bg-img("../img/services/s-2.jpg");
+    }
+    &-3 {
+      @include set-bg-img("../img/services/s-3.jpg");
+    }
+  }
+
+  &-card {
+    @include flex(60rem, column, center, center);
+    div {
+      width: 100%;
+      height: auto;
+    }
+    padding: 5rem 3rem;
+    img {
+      width: 10rem;
+      margin-bottom: 2rem;
+    }
+
+    h5 {
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $gray;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  @include media("laptop") {
+    &-content > div {
+      width: 33.3%;
+    }
+  }
+}

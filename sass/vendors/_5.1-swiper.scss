@@ -1,58 +1,57 @@
 .swiper-container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
     width: 100%;
     height: 100%;
-    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    @include absolute(0, 0);
+    //z-index: 2;
+    //pointer-events: none;
+  }
 
-    &::before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0, .5);
-        @include absolute(0,0);
-        //z-index: 2;
-        //pointer-events: none;
-    }
-
-    &-1 {
-        @include set-bg-img('../img/hero/slide-1.jpg');
-    }
-    &-2 {
-        @include set-bg-img('../img/hero/slide-2.jpg');
-    }
-    &-3 {
-        @include set-bg-img('../img/hero/slide-3.jpg');
-    }
+  &-1 {
+    @include set-bg-img("../img/hero/slide-1.jpg");
+  }
+  &-2 {
+    @include set-bg-img("../img/hero/slide-2.jpg");
+  }
+  &-3 {
+    @include set-bg-img("../img/hero/slide-3.jpg");
+  }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    display: none;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    background: rgba(0,0,0, .6);
-    outline: none;
-    border: none;
-    //z-index: 100;
-    @include t(background-color, $t-time, linear, 0);
+  display: none;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  outline: none;
+  border: none;
+  //z-index: 100;
+  @include t(background-color, $t-time, linear, 0);
 
-    &:hover {
-        background: $main-color;
-        //opacity: .6;
-    }
+  &:hover {
+    background: $main-color;
+    //opacity: .6;
+  }
 
+  &::after {
+    color: $white;
+    font-size: 4rem;
+  }
 
-    &::after {
-        color: $white;
-        font-size: 4rem;
-    }
-
-    @include media('pc') {
-        display: flex;
-    }
+  @include media("laptop") {
+    display: flex;
+  }
 }

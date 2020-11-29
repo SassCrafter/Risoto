@@ -56,3 +56,12 @@ img {
   width: 100%;
   max-width: 100%;
 }
+
+@include media("laptop") {
+  section:not(.hero) {
+    padding: 6rem 0;
+  }
+  p {
+    font-size: 1.7rem;
+  }
+}
