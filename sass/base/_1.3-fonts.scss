@@ -28,7 +28,11 @@
 
 
 // Playfair Display
-
+@font-face {
+    font-family: 'Playfair';
+    font-weight: 400;
+    src: url('../fonts/playfair/PlayfairDisplay-Regular.ttf') format('truetype');
+}
 @font-face {
     font-family: 'Playfair';
     font-weight: 700;

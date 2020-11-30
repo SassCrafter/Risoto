@@ -9,11 +9,26 @@
   margin: 0 auto;
 }
 
+.center {
+  @include flex(auto, column, center , center);
+  margin: 3rem 0;
+}
+
+// BG
+.bg {
+  &-main {
+    @include set-bg-color($main-color);
+  }
+  &-light-gray {
+    @include set-bg-color(#fafafa);
+  }
+}
+
 // Text
 .text-center {
   width: 100%;
   padding: 0 1rem;
-  max-width: 60rem;
+  max-width: 80rem;
   @include absolute;
   text-align: center;
   z-index: 20;
@@ -59,12 +74,28 @@
   letter-spacing: 0.1rem;
 }
 
+
+.white-text {
+  color: $white;
+
+  span {
+    font-style: italic;
+    color: rgba(255,255,255, .65);
+    text-transform: capitalize;
+  }
+}
+
 .img-wrapper {
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+
+.section-img {
+  width: 100%;
+  height: 56rem;
 }
 
 @include media("tablet") {
@@ -79,6 +110,10 @@
   }
   .bigger {
     font-size: 1.9rem;
+  }
+
+  .section-img {
+    width: 45%;
   }
 }
 
@@ -95,5 +130,8 @@
   }
   .bigger {
     font-size: 2rem;
+  }
+  .section-img {
+    height: 75rem;
   }
 }

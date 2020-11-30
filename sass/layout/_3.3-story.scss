@@ -1,0 +1,24 @@
+.story {
+    &-container {
+        @include flex(auto, column);
+    }
+
+    &-img {
+        @include set-bg-img('../img/story/story-1.jpeg');
+        background-position: center top;
+    }
+
+    @include media('tablet') {
+        &-container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &-content {
+            width: 45%;
+            .align-text {
+                text-align: left;
+            }
+        }
+    }
+}

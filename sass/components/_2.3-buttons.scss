@@ -15,4 +15,8 @@
     &:hover {
         @include set-bg-color($black);
     }
+
+    &-white {
+        @include set-bg-color($white);
+    }
 }

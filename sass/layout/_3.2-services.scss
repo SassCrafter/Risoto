@@ -1,7 +1,8 @@
 .services-section {
+  padding-bottom: 0 !important;
   &-content {
-    @include flex(auto, row, flex-start, center);
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
 
     div {
       width: 100%;
@@ -47,8 +48,9 @@
   }
 
   @include media("laptop") {
-    &-content > div {
-      width: 33.3%;
+
+    &-content {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

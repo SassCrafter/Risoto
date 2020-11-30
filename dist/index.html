@@ -134,9 +134,9 @@ them fill tables since 1978, welcome to Risoto family restaurant!
         </div>
     </section>
 
-    <section class="menu">
-        <div class="container menu-content">
-            <div class="menu-wrapper">
+    <section class="menu bg-light-gray">
+        <div class="menu-content">
+            <div class="container menu-wrapper">
                 <div class="align-text">
                     <h5 class="sub-heading">chef recommends</h5>
                     <h2 class="heading">Try our specialities</h2>
@@ -144,23 +144,23 @@ them fill tables since 1978, welcome to Risoto family restaurant!
 
                 <!-- Tabs navigation -->
                 <ul class="nav-tab" id="nav-tab">
-                    <li class="active">
-                        <a href="#starter">
+                    <li class="tab-active">
+                        <a href="#starters" onclick="return false">
                             <img src="./img/tab-icons/tab-icon-1.png" alt="" class="nav-tab-icon"> starter
                         </a>
                     </li>
                     <li>
-                        <a href="#dishes">
+                        <a href="#dishes" onclick="return false">
                             <img src="./img/tab-icons/tab-icon-2.png" alt="" class="nav-tab-icon"> dishes
                         </a>
                     </li>
                     <li>
-                        <a href="#deserts">
+                        <a href="#deserts" onclick="return false">
                             <img src="./img/tab-icons/tab-icon-3.png" alt="" class="nav-tab-icon"> deserts
                         </a>
                     </li>
                     <li>
-                        <a href="#drinks">
+                        <a href="#drinks" onclick="return false">
                             <img src="./img/tab-icons/tab-icon-4.png" alt="" class="nav-tab-icon"> drinks
                         </a>
                     </li>
@@ -168,9 +168,9 @@ them fill tables since 1978, welcome to Risoto family restaurant!
 
                 <!-- Tabs -->
                 <div class="tab-content">
-                    <div class="starter-tabs active" id='starter'>
+                    <div class="tab starters tab-active" id='starters'>
                         <div class="tab-pane">
-                            <div class="tab-pane-img tab-pane-img-1"></div>
+                            <img src="./img/menu/starters/starter-1.jpg" alt="" class="tab-pane-img">
                             <div class="tab-pane-content">
                                 <h5>beef stake with broccoli</h5>
                                 <small>Aliquid nihil volup</small>
@@ -180,9 +180,9 @@ them fill tables since 1978, welcome to Risoto family restaurant!
                                 </div>
                             </div>
                         </div>
-                        <!-- Tab end -->
+                        <!-- Tab-pane end -->
                         <div class="tab-pane">
-                            <div class="tab-pane-img tab-pane-img-2"></div>
+                            <img src="./img/menu/starters/starter-2.jpg" alt="" class="tab-pane-img">
                             <div class="tab-pane-content">
                                 <h5>crab cakes</h5>
                                 <small>Aliquid nihil volup</small>
@@ -192,12 +192,12 @@ them fill tables since 1978, welcome to Risoto family restaurant!
                                 </div>
                             </div>
                         </div>
-                        <!-- Tab end -->
+                        <!-- Tab-pane end -->
                     </div>
                     <!-- Starter end -->
-                    <div class="dishes" id="dishes">
+                    <div class="tab dishes" id="dishes">
                         <div class="tab-pane">
-                            <div class="tab-pane-img tab-pane-img-3"></div>
+                            <img src="./img/menu/dishes/dish-1.jpg" alt="" class="tab-pane-img">
                             <div class="tab-pane-content">
                                 <h5>world's best lasagna</h5>
                                 <small>Aliquid nihil volup</small>
@@ -207,9 +207,9 @@ them fill tables since 1978, welcome to Risoto family restaurant!
                                 </div>
                             </div>
                         </div>
-                        <!-- Tab end -->
+                        <!-- Tab-pane end -->
                         <div class="tab-pane">
-                            <div class="tab-pane-img tab-pane-img-4"></div>
+                            <img src="./img/menu/dishes/dish-2.jpg" alt="" class="tab-pane-img">
                             <div class="tab-pane-content">
                                 <h5>brown sugar meatloaf</h5>
                                 <small>Aliquid nihil volup</small>
@@ -219,13 +219,123 @@ them fill tables since 1978, welcome to Risoto family restaurant!
                                 </div>
                             </div>
                         </div>
-                        <!-- Tab end -->
+                        <!-- Tab-pane end -->
+                    </div>
+                    <div class="tab deserts" id="deserts">
+                        <div class="tab-pane">
+                            <img src="./img/menu/deserts/desert-1.jpg" alt="" class="tab-pane-img">
+                            <div class="tab-pane-content">
+                                <h5>pumpkin spice cupcake</h5>
+                                <small>Aliquid nihil volup</small>
+                                <div>
+                                    <p><span>430</span> Kcal</p>
+                                    <span>$49</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab-pane end -->
+                        <div class="tab-pane">
+                            <img src="./img/menu/deserts/desert-2.jpg" alt="" class="tab-pane-img">
+                            <div class="tab-pane-content">
+                                <h5>peanut blossoms</h5>
+                                <small>Aliquid nihil volup</small>
+                                <div>
+                                    <p><span>980</span> Kcal</p>
+                                    <span>$18</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab-pane end -->
+                        <div class="tab-pane">
+                            <img src="./img/menu/deserts/desert-3.jpg" alt="" class="tab-pane-img">
+                            <div class="tab-pane-content">
+                                <h5>apple crisp cups</h5>
+                                <small>Aliquid nihil volup</small>
+                                <div>
+                                    <p><span>109</span> Kcal</p>
+                                    <span>$8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab-pane end -->
+                    </div>
+                    <!-- Tab end -->
+                    <div class="tab drinks" id="drinks">
+                        <div class="tab-pane">
+                            <img src="./img/menu/drinks/drink-1.jpg" alt="" class="tab-pane-img">
+                            <div class="tab-pane-content">
+                                <h5>mojito perfecto</h5>
+                                <small>Aliquid nihil volup</small>
+                                <div>
+                                    <p><span>139</span> Kcal</p>
+                                    <span>$40</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab-pane end -->
+                        <div class="tab-pane">
+                            <img src="./img/menu/drinks/drink-2.jpg" alt="" class="tab-pane-img">
+                            <div class="tab-pane-content">
+                                <h5>sassy sangaria</h5>
+                                <small>Aliquid nihil volup</small>
+                                <div>
+                                    <p><span>80</span> Kcal</p>
+                                    <span>$12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab-pane end -->
+                        <div class="tab-pane">
+                            <img src="./img/menu/drinks/drink-3.jpg" alt="" class="tab-pane-img">
+                            <div class="tab-pane-content">
+                                <h5>creamy hot cocoa</h5>
+                                <small>Aliquid nihil volup</small>
+                                <div>
+                                    <p><span>310</span> Kcal</p>
+                                    <span>$5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab-pane end -->
+                    </div>
+                </div>
+                <div class="center">
+                    <a href="menu.html" class="btn">view full menu</a>
+                </div>
+            </div>
+            <!-- Menu wrapper end -->
+            <div class="working-hours bg-main">
+                <div>
+                    <h3>opening hours</h3>
+
+                    <p class="white-text"><span class="day">monday.................</span>12am - 10pm</p>
+                    <p class="white-text"><span class="day"> tuesday.................</span>12am - 10pm</p>
+                    <p class="white-text"><span class="day">wednesday.................</span>12am - 10pm</p>
+                    <p class="white-text"><span class="day">thursday.................</span>12am - 10pm</p>
+                    <p class="white-text"><span class="day">friday.................</span>12am - 10pm</p>
+                    <p class="white-text"><span class="day">saturday.................</span>12am - 8pm</p>
+                    <p class="white-text"><span class="day">sunday.................</span>closed</p>
+                    <div class="center">
+                        <a href="book.html" class="btn btn-white">book a table</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="story">
+        <div class="container story-container">
+            <div class="story-content">
+                <div class="align-text">
+                    <h5 class="sub-heading">welcome</h5>
+                    <h2 class="heading">discover the story</h2>
+                    <p class="bigger">Fusce convallis metus id felis luctus adipiscing. Aliquam lobortis. Vivamus laoreet. Praesent venenatis metus at tortor pulvinar varius. Duis leo. Curabitur vestibulum aliquam leo. Praesent ac sem eget est egestas volutpat. Maecenas egestas arcu quis ligula mattis placerat. Quisque libero metus, condimentum nec.</p>
+                    <a href="menu.html" class="btn">see our menu</a>
+                </div>
+            </div>
+            <div class="section-img story-img"></div>
+        </div>
+    </section>
 
     <script src="./js/app.js"></script>
     <!-- Swiper js -->

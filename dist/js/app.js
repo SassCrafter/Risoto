@@ -32,9 +32,43 @@ window.addEventListener('scroll', function () {
 
 
 // Tabs
+/*
+function onTabClick(event) {
+    let activeTabs = document.querySelectorAll('.tab-active');
+  
+    // deactivate existing active tab and panel 
+    activeTabs.forEach(function(tab) {
+      tab.className = tab.className.replace('tab-active', '');
+    });
+  
+    // activate new tab and panel
+    event.target.parentElement.className += ' tab-active';
+    console.log(event.target.parentElement);
+    document.getElementById(event.target.href.split('#')[1]).className += ' tab-active';
+  }
+  
+  const element = document.getElementById('nav-tab');
+  
+  element.addEventListener('click', onTabClick, false);
+*/
 
-
-
-
-const element = document.getElementById('nav-tab');
-element.addEventListener('click', onTabClick, false);
+const tabLinks = document.querySelectorAll('.nav-tab li');
+const tabs = document.querySelectorAll('.tab');
+tabLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        tabLinks.forEach(element => {
+            element.classList.remove('tab-active');
+        })
+        tabs.forEach(element => {
+            element.classList.remove('tab-active');
+        })
+        link.classList.add('tab-active');
+        let tab = link.firstElementChild.href.split('#')[1];
+        console.log(tab);
+        tabs.forEach(el => {
+            if (el.classList.contains(tab)) {
+                el.classList.add('tab-active');
+            }
+        })
+    });
+});

@@ -1,0 +1,43 @@
+.menu {
+    padding: 0 !important;
+}
+
+.menu-content {
+    //width: 100%
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+.menu-wrapper {
+    height: 100%;
+    margin-top: 3rem;
+}
+
+.working-hours {
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+
+    & > div {
+        padding: 15rem 2rem;
+        border: 2px solid $white;
+    }
+
+    h3 {
+        font-size: 3rem;
+        color: $white;
+        text-transform: capitalize;
+        margin-bottom: 4rem;
+    }
+}
+
+
+@include media('pc') {
+    .menu-content {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .menu-wrapper {
+        margin-top: 6rem;
+    }
+}
