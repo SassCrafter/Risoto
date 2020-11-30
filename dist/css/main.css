@@ -66,6 +66,10 @@
   padding: 0 3rem;
 }
 
+.no-padding {
+  padding: 0 !important;
+}
+
 .align-center {
   max-width: 60rem;
   margin: 0 auto;
@@ -153,6 +157,16 @@
   letter-spacing: 0.1rem;
 }
 
+.big-text {
+  font-size: 3.6rem;
+  font-family: "Playball", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .white-text {
   color: #fff;
 }
@@ -190,6 +204,9 @@
   }
   .section-img {
     width: 45%;
+  }
+  .big-text {
+    font-size: 4.4rem;
   }
 }
 
@@ -662,6 +679,10 @@ img {
   margin-right: 8rem;
 }
 
+.tab-content {
+  position: relative;
+}
+
 .tab {
   height: auto;
   display: -webkit-box;
@@ -677,25 +698,25 @@ img {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  display: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 500ms linear 0ms;
-  -o-transition: opacity 500ms linear 0ms;
-  transition: opacity 500ms linear 0ms;
+  -webkit-transition: opacity 1s linear 0ms;
+  -o-transition: opacity 1s linear 0ms;
+  transition: opacity 1s linear 0ms;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }
 
 .tab.tab-active {
   visibility: visible;
   opacity: 1;
-  position: static;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: static !important;
 }
 
 .tab-pane {
   width: 100%;
+  max-width: 40rem;
   background: transparent;
   -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.05);
@@ -808,7 +829,7 @@ img {
   color: #121212;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 650px) {
   .nav-tab {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -851,7 +872,7 @@ img {
   .tab-pane-img {
     width: 45%;
     height: 100%;
-    max-height: 14rem;
+    min-height: 15rem;
   }
   .tab-pane-content h5 {
     font-size: 1.7rem;
@@ -864,7 +885,7 @@ img {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .tab-content h5 {
     font-size: 2rem;
   }
@@ -909,7 +930,7 @@ img {
   margin-bottom: 4rem;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
   .menu-content {
     grid-template-columns: 2fr 1fr;
   }
