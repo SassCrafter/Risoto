@@ -1,0 +1,19 @@
+.footer {
+    text-align: center;
+
+    &-content {
+        @include flex(100%, column, center, flex-start);
+    }
+
+    .logo {
+        margin-bottom: 1.5rem;
+    }
+
+    .sm {
+        margin-bottom: 1.5rem;
+        a {
+            font-size: 2rem;
+        }
+
+    }
+}

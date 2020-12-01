@@ -1,0 +1,30 @@
+.sm {
+    @include flex;
+
+    li:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    span {
+      font-family: $playball;
+      font-size: 2rem;
+    }
+
+    a {
+      display: inline-block;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background: tranparent;
+      padding: 0.5rem;
+      color: $gray;
+      text-align: center;
+      line-height: 3rem;
+      transition: background-color $t-time linear, color $t-time linear;
+
+      &:hover {
+        color: $white !important;
+        background: $main-color;
+      }
+    }
+  }

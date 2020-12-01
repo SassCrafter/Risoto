@@ -41,6 +41,8 @@
 }
 
 .tab {
+  max-width: 80rem;
+  margin: 0 auto;
   @include flex(auto, column, center, flex-start);
   //display: none;
   opacity: 0;
@@ -62,11 +64,12 @@
   width: 100%;
   max-width: 40rem;
   background: transparent;
-  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
   @include flex(auto, column, flex-start, flex-start);
   text-align: left;
   margin-bottom: 2rem;
   transition: box-shadow $t-time linear, transform $t-time $t-timing;
+  cursor: pointer;
 
   &:hover {
     transform: translateY(-1rem);
@@ -144,12 +147,16 @@
   .tab {
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    
 
     &-pane {
       width: 47%;
       flex-direction: row;
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
 
       &-img {
         width: 45%;

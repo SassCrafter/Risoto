@@ -17,10 +17,14 @@
   width: 100%;
   padding: 3rem;
   text-align: center;
+  @include flex;
 
   & > div {
+    width: 100%;
+    height: 100%;
     padding: 15rem 2rem;
     border: 2px solid $white;
+    @include flex(100%, column, center, center);
   }
 
   h3 {
@@ -32,6 +36,12 @@
 }
 
 @include media("laptop") {
+
+  .menu-center {
+    .menu-content {
+      grid-template-columns: 1fr;
+    }
+  }
   .menu-content {
     grid-template-columns: 2fr 1fr;
   }
